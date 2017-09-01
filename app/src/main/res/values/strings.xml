@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PizzaApp</string>
+    <string name="btn">Ordenar !</string>
+
+    <string name="splash">Pizza Hut !!</string>
+
+    <string name="title_tipo_pizza">Tipo de Pizza</string>
+    <string name="title_masa">Tipo de Masa</string>
+    <string name="title_complementos">Complementos</string>
+    <string name="title_direccion">Dirección de Envio</string>
+
+    <string name="com_queso">Extra Queso Mozarella</string>
+    <string name="com_jamon">Extra Jamon</string>
+
+    <string name="direc_envio">Escriba su Dirección</string>
+
+    <string-array name="tipo_pizza">
+        <item>Pizza Americana</item>
+        <item>Pizza Meet Lover</item>
+        <item>Pizza Huawaiana</item>
+        <item>Pizza Super Suprema</item>
+    </string-array>
+
+</resources>

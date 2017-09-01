@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context="com.jeferson.pizzaapp.ServicioActivity">
+
+    <TextView
+        android:id="@+id/type_pizza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_tipo_pizza"
+        android:textStyle="bold"
+        android:textSize="15dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_tipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/type_pizza"
+        android:layout_alignParentStart="true"
+        android:entries="@array/tipo_pizza"/>
+
+    <TextView
+        android:id="@+id/type_masa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_masa"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/spinner_tipo"
+        android:textSize="15dp"/>
+
+    <RadioGroup
+        android:id="@+id/radio_Group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/type_masa">
+
+        <RadioButton
+            android:id="@+id/radio_button_gruesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="RadioClicked"
+            android:text="Maza Gruesa"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_delgada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="RadioClicked"
+            android:text="Masa Delgada"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_artesanal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="RadioClicked"
+            android:text="Masa Artesanal"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/type_complemento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_complementos"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_below="@+id/radio_Group"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/checkbox_com"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/type_complemento">
+
+        <CheckBox
+            android:id="@+id/checkbox_queso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/com_queso"
+            android:onClick="complementos"
+            android:layout_marginTop="5dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_jamon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/com_jamon"
+            android:onClick="complementos"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/type_envio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_direccion"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_below="@+id/checkbox_com"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/direc_envio"
+        android:layout_below="@+id/type_envio"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn"
+        android:layout_below="@+id/direccion"
+        android:layout_marginTop="70dp"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:onClick="Ordenar"/>
+
+</RelativeLayout>
