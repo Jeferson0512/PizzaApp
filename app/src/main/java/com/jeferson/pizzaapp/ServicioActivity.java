@@ -48,23 +48,23 @@ public class ServicioActivity extends AppCompatActivity {
 
                 String tipo_pizza = parent.getItemAtPosition(post).toString();
                 switch (tipo_pizza){
-                    case "Americana":
-                        v1.setTipo_pizza("Americana");
+                    case "Pizza Americana":
+                        v1.setTipo_pizza("Pizza Americana");
                         v1.setPrecio(40);
                         Total();
                     break;
-                    case "Meet Lover":
-                        v1.setTipo_pizza("Meet Lover");
+                    case "Pizza Meet Lover":
+                        v1.setTipo_pizza("Pizza Meet Lover");
                         v1.setPrecio(45);
                         Total();
                     break;
-                    case "Hawaiana":
-                        v1.setTipo_pizza("Hawaiana");
+                    case "Pizza Hawaiana":
+                        v1.setTipo_pizza("Pizza Hawaiana");
                         v1.setPrecio(65);
                         Total();
                     break;
-                    case "Super Suprema":
-                        v1.setTipo_pizza("Super Suprema");
+                    case "Pizza Super Suprema":
+                        v1.setTipo_pizza("Pizza Super Suprema");
                         v1.setPrecio(60);
                         Total();
                     break;
@@ -128,9 +128,9 @@ public class ServicioActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.servicio_entrega);
         dialog.setTitle("Informacion de su Cuenta");
 
-        Button button_cancel = (Button)findViewById(R.id.Dialog_Cancel);
-        Button button_ok = (Button)findViewById(R.id.Dialog_Ok);
-        TextView txt_informacion = (TextView)findViewById(R.id.informacion_entrega);
+        Button button_cancel = (Button)dialog.findViewById(R.id.Dialog_Cancel);
+        Button button_ok = (Button)dialog.findViewById(R.id.Dialog_Ok);
+        TextView txt_informacion = (TextView)dialog.findViewById(R.id.informacion_entrega);
 
         txt_informacion.setText("Su pizza "+v1.getTipo_pizza()+" con "+v1.getTipo_maza()+" a S/."+total+" + IGV esta en proceso de envio cuando le da ''OK''");
         button_cancel.setOnClickListener(new View.OnClickListener() {
@@ -163,7 +163,7 @@ public class ServicioActivity extends AppCompatActivity {
 
                 PendingIntent pendingIntent = PendingIntent.getActivity(ServicioActivity.this, 100, intent, PendingIntent.FLAG_ONE_SHOT);
                 Notification notification = new NotificationCompat.Builder(ServicioActivity.this)
-                        .setContentTitle("PIZZA GO")
+                        .setContentTitle("PIZZA HUT !!!")
                         .setContentText("Su pizza "+v1.getTipo_pizza()+" esta en proceso de envio")
                         .setSmallIcon(R.mipmap.pizza)
                         .setColor(ContextCompat.getColor(ServicioActivity.this, R.color.colorPrimary))
